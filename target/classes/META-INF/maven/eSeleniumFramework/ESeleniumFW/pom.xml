@@ -8,6 +8,7 @@
 	<groupId>eSeleniumFramework </groupId>
 	<artifactId>ESeleniumFW</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
 
 	<name>ESeleniumFW</name>
 	<!-- FIXME change it to the project's website -->
@@ -46,13 +47,7 @@
 			<version>7.14.0</version>
 		</dependency>-->
 
-		<!-- Cucumber-JUnit -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>7.14.0</version> <!-- Or your desired version -->
-			<scope>test</scope>
-		</dependency>
+		
 
 
 		<!-- Selenium -->
@@ -98,11 +93,7 @@
 			<version>5.5.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>SeleniumPractise</groupId>
-			<artifactId>SeleniumPractical</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 
 

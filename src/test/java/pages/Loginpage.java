@@ -37,8 +37,9 @@ public class Loginpage extends BaseTest{
 		searchInput.sendKeys(string); // Type the search term in the search bar
 	}
 
-	public void user_clicks_the_search_button() {
+	public void user_clicks_the_search_button() throws InterruptedException {
 		WebElement searchbutton = driver.findElement(By.xpath(config.getLocator("searchButton")));
 		searchbutton.click();
+		Thread.sleep(3000);
 	}
 }
