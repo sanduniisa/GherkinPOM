@@ -11,27 +11,31 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 	protected static ExtentReports extent;
-	protected static ExtentTest test;
-	protected WebDriver driver;
+    protected static ExtentTest test;
+    protected WebDriver driver;
 
-	@BeforeMethod
-	public void init() {
-		driver = DriverFactory.getDriver(); // Retrieve the WebDriver instance
+    @BeforeMethod
+    public void init() {
+        driver = DriverFactory.getDriver(); // Retrieve the WebDriver instance
 
-		try {
-			System.out.println("Attempting to maximize the browser window...");
-			driver.manage().window().maximize(); // Maximize the window
-			System.out.println("Browser window maximized.");
-		} catch (Exception e) {
-			System.out.println("Maximizing failed. Setting window size manually.");
-			driver.manage().window().setSize(new Dimension(1920, 1080)); // Set default size
-		}
-	}
+        // Navigate to the URL from config.properties
+        String loginPageURL = ConfigManager.getProperty("loginPageURL");
+        driver.get(loginPageURL);
 
-	@AfterMethod
-	public void tearDown() throws InterruptedException {
-		System.out.println("Closing the browser...");
-		DriverFactory.quitDriver(); // Quit the driver using DriverFactory
-		System.out.println("Browser closed successfully.");
-	}
+//        try {
+//            System.out.println("Attempting to maximize the browser window...");
+//            driver.manage().window().maximize(); // Maximize the window
+//            System.out.println("Browser window maximized.");
+//        } catch (Exception e) {
+//            System.out.println("Maximizing failed. Setting window size manually.");
+//            driver.manage().window().setSize(new Dimension(1920, 1080)); // Set default size
+//        }
+    }
+
+//    @AfterMethod
+//    public void tearDown() throws InterruptedException {
+//        System.out.println("Closing the browser...");
+//        DriverFactory.quitDriver(); // Quit the driver using DriverFactory
+//        System.out.println("Web Browser closed successfully.");
+//    }
 }

@@ -23,7 +23,7 @@ public class DriverFactory {
         if (driver.get() != null) {
             try {
                 driver.get().quit();
-                System.out.println("Browser closed successfully.");
+//                System.out.println("Browser closed successfully.");
             } catch (Exception e) {
                 System.err.println("Error occurred while quitting the browser: " + e.getMessage());
             } finally {

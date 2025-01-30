@@ -42,7 +42,7 @@ public class LoginSteps extends BaseTest {
 	}
 
 	@Then("user clicks the search button")
-	public void user_clicks_the_search_button() {
+	public void user_clicks_the_search_button() throws InterruptedException {
 		loginPage.user_clicks_the_search_button();
 	}
 }
